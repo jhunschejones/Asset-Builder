@@ -1,0 +1,20 @@
+{
+  "name": "album-tags-phoenix-build-tools",
+  "version": "0.1.0",
+  "description": "Build tools to compile materialize assets for album-tags-phoenix",
+  "repository": "https://github.com/jhunschejones/Album-Tags-Phoenix",
+  "scripts": {
+    "watch": "onchange '../../assets/**/*.css' '../../assets/**/*.js' '../../assets/**/*.scss' -- elixir watch.exs {{changed}} {{event}}",
+    "minify-css": "uglifycss $FROM > $TO",
+    "compile-scss": "node-sass --output-style compressed --omit-source-map-url --quiet $FROM $TO",
+    "minify-js": "google-closure-compiler --jscomp_off=misplacedTypeAnnotation --js=$FROM --js_output_file=$TO"
+  },
+  "author": "Joshua Hunsche Jones",
+  "license": "MIT",
+  "devDependencies": {
+    "google-closure-compiler": "~> 20190528.0.0",
+    "node-sass": "~> 4.12.0",
+    "onchange": "~> 6.0.0",
+    "uglifycss": "~> 0.0.29"
+  }
+}
