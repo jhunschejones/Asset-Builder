@@ -1,8 +1,8 @@
 {
-  "name": "album-tags-phoenix-build-tools",
-  "version": "0.1.0",
-  "description": "Build tools to compile materialize assets for album-tags-phoenix",
-  "repository": "https://github.com/jhunschejones/Album-Tags-Phoenix",
+  "name": "asset-builder",
+  "version": "0.2.0",
+  "description": "Build tools to compile static assets for your Phoenix app",
+  "repository": "https://github.com/jhunschejones/Asset-Builder",
   "scripts": {
     "watch": "onchange '../../assets/**/*.css' '../../assets/**/*.js' '../../assets/**/*.scss' -- elixir watch.exs {{changed}} {{event}}",
     "minify-css": "uglifycss $FROM > $TO",

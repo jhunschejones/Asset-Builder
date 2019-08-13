@@ -1,8 +1,5 @@
 defmodule AssetBuilder do
-  def compile(file) do
-    file_extension = file |> String.split(".") |> List.last()
-    compile(file, file_extension)
-  end
+  def compile(file), do: compile(file, file_extension(file))
 
   def compile(file, "scss") do
     System.cmd("npm", ["run", "--silent", "compile-scss"],
